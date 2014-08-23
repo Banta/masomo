@@ -1,2 +1,4 @@
-<h3>Welcome</h3>
-<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+<% if user_signed_in? %>
+  <h3>Welcome <b><%= current_user.name %></b></h3>
+  <p>Your have regitstered for the <%= Course.first.name %> course</p>
+<% end %>

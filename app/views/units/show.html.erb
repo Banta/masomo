@@ -1,0 +1,28 @@
+<h3>Unit</h3>
+<div style="padding-top: 20px;">
+  <table style="width: 400px;" class="table">
+    <tbody>
+      <tr>
+  	    <td>Code</td>
+  	    <td><%= @unit.code %></td>
+      </tr> 
+
+      <tr>
+  	    <td>Name</td>
+  	    <td><%= @unit.name %></td>
+      </tr> 
+
+      <tr>
+  	    <td>Course</td>
+  	    <td><%= @unit.course_name %></td>
+      </tr> 
+
+      <tr>
+        <td>Leason 1</td>
+        <td><%= link_to 'Download', download_resource_unit_path(@unit) %></td>
+      </tr> 
+    </tbody>
+  </table>
+</div>
+
+<%= link_to 'View tests', unit_tests_path(@unit) %>

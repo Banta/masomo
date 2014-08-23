@@ -1,0 +1,8 @@
+<td><%= link_to test.name, test %></td>
+<td><%= test.start_time.strftime('%d-%m-%Y') %>(Start date)</td>
+<td><%= test.due_date.strftime('%d-%m-%Y') %>(Due date)</td>
+<% unless test.has_been_taken?(current_user) %>
+  <td><%= link_to 'Take exam', '' %></td>
+<% end %>
+
+

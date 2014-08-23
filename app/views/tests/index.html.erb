@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <h3>Tests</h3>
+    <div class="column">
+      <table class="table">
+        <tbody>
+          <% @tests.each do |test| %>
+            <tr>
+              <%= render test %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <%= link_to 'Back', :back %>
+</div>
+

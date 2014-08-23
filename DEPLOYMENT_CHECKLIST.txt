@@ -1,0 +1,1 @@
+Montell - After migrating the db run 'rake db:seed'

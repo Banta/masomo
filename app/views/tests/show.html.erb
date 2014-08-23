@@ -1,0 +1,26 @@
+<h3>Test</h3>
+<div style="padding-top: 20px;">
+  <table style="width: 400px;" class="table">
+    <tbody>
+      <tr>
+  	    <td>Name</td>
+  	    <td><%= @test.name %></td>
+      </tr>
+
+      <tr>
+  	    <td>Unit</td>
+  	    <td><%= "#{@test.unit_name} (#{@test.unit_code})" %></td>
+      </tr>
+
+      <tr>
+  	    <td>Start date</td>
+  	    <td><%= @test.start_time.strftime('%d-%m-%Y') %></td>
+      </tr> 
+
+      <tr>
+  	    <td>Due date</td>
+  	    <td><%= @test.due_date.strftime('%d-%m-%Y') %></td>
+      </tr> 
+    </tbody>
+  </table>
+</div>
