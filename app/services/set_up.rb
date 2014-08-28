@@ -10,7 +10,7 @@ class SetUp
 
     def create_courses
       Course.find_or_create_by!(name: 'BBIT')
-      pp 'Created courses.'
+      puts 'Created courses.'
     end
 
     def create_users
@@ -27,7 +27,7 @@ class SetUp
         lecturer.password_confirmation = Rails.application.secrets.admin_password
         lecturer.confirm!
       end
-      pp 'Created users.'
+      puts 'Created users.'
     end
 
     def create_units
@@ -45,7 +45,7 @@ class SetUp
         unit.name = 'Communication Skills'
         unit.lecturer_id = lecture.id
       end
-      pp 'Created units.'
+      puts 'Created units.'
     end
 
     def create_tests
@@ -62,7 +62,7 @@ class SetUp
         cat.due_date = 2.weeks.since
         cat.duration = 120 # Duration in minutes
       end
-      pp 'Created tests.'
+      puts 'Created tests.'
     end
 
     def create_questions
@@ -85,7 +85,7 @@ class SetUp
       Question.find_or_create_by!(question: 'What are the forms of communication?') do |question|
         question.test_id = test.id   
       end
-      pp 'Created questions.'
+      puts 'Created questions.'
     end
   end
 end
